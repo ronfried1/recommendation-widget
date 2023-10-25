@@ -1,0 +1,33 @@
+Instructions for Running the Project
+
+Prerequisites:
+- Node.js and npm: Ensure you have Node.js and npm (Node Package Manager) installed on your machine. You can download them from nodejs.org.
+
+Installation:
+
+1. Clone the Repository:
+   Start by cloning this project's repository to your local machine. You can do this using Git or by downloading the ZIP file from the project's GitHub page.
+
+   git clone https://github.com/ronfried1/recommendation-widget.git
+
+2. Navigate to Project Directory:
+   Open your terminal and change the current directory to the project's root folder.
+
+   cd project-directory
+
+3. Install Dependencies:
+   Use npm to install the project's dependencies listed in the package.json file.
+
+   npm install
+
+Configuration:
+
+1. Configuration:
+   Make sure you use an American IP or VPN for proper functionality.
+
+2. Start the Application:
+   Use a Live Server extension to run the code.
+
+Running Tests:
+
+  Run npm test

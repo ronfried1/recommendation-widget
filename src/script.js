@@ -74,7 +74,5 @@ fetchRecommendations(url);
 if (typeof module === "object") {
   module.exports = {
     renderRecommendations,
-    renderSponsoredRecommendation,
-    renderOrganicRecommendation,
   };
 }
