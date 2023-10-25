@@ -41,7 +41,7 @@ const renderRecommendations = (recommendations) => {
       recommendationElement.innerHTML =
         renderSponsoredRecommendation(recommendation);
     } else {
-      recommendationElement.classList.add("origin");
+      recommendationElement.classList.add("organic");
       recommendationElement.innerHTML =
         renderOrganicRecommendation(recommendation);
     }

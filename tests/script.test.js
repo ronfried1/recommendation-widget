@@ -5,7 +5,7 @@ global.fetch = jest.fn(() =>
 const { renderRecommendations } = require("../src/script");
 const {
   sponsoredRecommendation,
-  originRecommendation,
+  organicRecommendation,
   emptyRecommendation,
   mixRecommendation,
 } = require("./mock");
@@ -30,35 +30,35 @@ test("renderRecommendations should render a sponsored recommendation", () => {
   renderRecommendations(sponsoredRecommendation.list);
 
   const recommendationElements = document.querySelectorAll(".recommendation");
-  let foundOrigin = false;
+  let foundSponsored = false;
 
   recommendationElements.forEach((element) => {
     if (element.classList.contains("sponsored")) {
-      foundOrigin = true;
+      foundSponsored = true;
     }
   });
 
   expect(recommendationElements).toBeTruthy();
-  expect(foundOrigin).toBe(true);
+  expect(foundSponsored).toBe(true);
 });
 
-// Test to render an origin recommendation
-test("renderRecommendations should render an origin recommendation", () => {
-  originRecommendation;
+// Test to render an organic recommendation
+test("renderRecommendations should render an organic recommendation", () => {
+  organicRecommendation;
 
-  renderRecommendations(originRecommendation.list);
+  renderRecommendations(organicRecommendation.list);
 
   const recommendationElements = document.querySelectorAll(".recommendation");
-  let foundOrigin = false;
+  let foundOrganic = false;
 
   recommendationElements.forEach((element) => {
-    if (element.classList.contains("origin")) {
-      foundOrigin = true;
+    if (element.classList.contains("organic")) {
+      foundOrganic = true;
     }
   });
 
   expect(recommendationElements).toBeTruthy();
-  expect(foundOrigin).toBe(true);
+  expect(foundOrganic).toBe(true);
 });
 
 // Test to handle empty recommendations
@@ -79,16 +79,16 @@ test("renderRecommendations should handle mixed recommendations", () => {
   expect(recommendationElements).toBeTruthy();
 
   let foundSponsored = false;
-  let foundOrigin = false;
+  let foundOrganic = false;
 
   recommendationElements.forEach((element) => {
     if (element.classList.contains("sponsored")) {
       foundSponsored = true;
-    } else if (element.classList.contains("origin")) {
-      foundOrigin = true;
+    } else if (element.classList.contains("organic")) {
+      foundOrganic = true;
     }
   });
 
   expect(foundSponsored).toBe(true);
-  expect(foundOrigin).toBe(true);
+  expect(foundOrganic).toBe(true);
 });
